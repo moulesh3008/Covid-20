@@ -1,0 +1,701 @@
+@import url('https://font.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px;
+  z-index: 10000;
+  transition: 0.6s;
+}
+header .logo
+{
+  position: relative;
+  font-weight: 700;
+  color: blue;
+  font-family: fangsong;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+.logo span{
+  color: #FF1A1A;
+  font-size: 1.3em;
+  font-family: fangsong;
+}
+header #toggle
+{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+header #toggle:before
+{
+  content: '';
+  position: absolute;
+  top: 7px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+header #toggle:after
+{
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+.banner.active header #toggle:before
+{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.banner.active header #toggle:after
+{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.banner
+{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  background: url(covid-2.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  z-index: 2;
+}
+.banner.active
+{
+  transform: translateX(-250px);
+}
+#navigation
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background: #1C2833;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+#navigation.active
+{
+  right: 0;
+}
+
+#navigation .links {
+	float: bottom;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#navigation .links li {
+	list-style: none;
+}
+#navigation .links a {
+	display: block;
+	padding: 1em;
+	font-size: 16px;
+	font-weight: bold;
+	color: #00FFFF;
+	text-decoration: none;
+  letter-spacing: 1px;
+}
+navigation-toggle {
+	position: absolute;
+}
+#navigation ul{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+#navigation ul li{
+  list-style: none;
+}
+#navigation ul li a{
+
+  position: relative;
+  letter-spacing: 2px;
+}
+#navigation ul li a:last-child{
+  margin-right: 0;
+}
+#navigation ul li a::before,
+#navigation ul li a::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: crimson;
+  bottom: 0;
+  transform: scaleX(0);
+}
+
+#navigation ul li a::before{
+  top: 0;
+  right: 0;
+}
+#navigation ul li a::after{
+  right: 0;
+}
+#navigation ul li a:hover::before,
+#navigation ul li a:hover::after{
+  transform: scaleX(1);
+}
+
+
+.content
+{
+  max-width: 600px;
+}
+.content h2
+{
+  color: #FFE6F7;
+  font-size: 2em;
+}
+.content p
+{
+  font-size: 1em;
+  color: #FFFFFF;
+  font-weight: 300;
+}
+.content a
+{
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  background: #FFFFFF;
+  color: #000000;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.sci
+{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 100px;
+}
+.sci li
+{
+  list-style: none;
+}
+.sci li a
+{
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  margin: 10px 0 0;
+}
+.sci li a:hover
+{
+  background: #FFFFFF;
+}
+.sci li a img
+{
+  max-width: 20px;
+  filter: invert(1);
+  mix-blend-mode: difference;
+}
+
+
+.contact-form
+{
+  width: 85%;
+  max-width: 400px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: url('covid-4.jpg');
+  background-size: contain;
+  left:50%;
+  right: 0;
+  transform: translate(-50%,-50%);
+  padding: 30px 40px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 20px #000000b3;
+  font-family: "Montserrat",sans-serif;
+}
+.contact-form h1
+{
+  margin-top: 0;
+  color: white;
+  font-weight: 200;
+}
+.txtb
+{
+  border: 1px solid blue;
+  margin: 8px 0;
+  padding: 12px 18px;
+  border-radius: 8px;
+}
+.txtb label
+{
+  display: block;
+  color: white;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.txtb input,
+.txtb textarea
+{
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 18px;
+  margin-top: 6px;
+}
+.btn
+{
+  display: inline-block;
+  background: blue;
+  padding: 14px 0;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 8px;
+  width: 100%;
+}
+.txt :hover
+{
+  background: #87CEEB;
+}
+.contact-form a:hover
+{
+  background: green;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  color: #d9d9d9;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.content1{
+  position: relative;
+  margin: 130px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+.content1 .text{
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #202020;
+}
+.content1 .p{
+  font-size: 2.1875rem;
+  font-weight: 600;
+  color: #202020;
+}
+footer{
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background: #1A1A1A;
+}
+.main-content{
+  display: flex;
+}
+.main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2{
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box p span{
+  color: red;
+}
+.box .content{
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.box .content:before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+.box .content:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background: #f12020;
+  top: -10px;
+}
+.left .content p{
+  text-align: justify;
+}
+.left .content .social{
+  margin: 20px 0 0 0;
+}
+.left .content .social a{
+  padding: 0 2px;
+}
+.left .content .social a span{
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover{
+  background: #f12020;
+}
+.center .content .fas{
+  font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.center .content .fas:hover{
+  background: #f12020;
+}
+.center .content .text{
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.center .content .phone{
+  margin: 15px 0;
+}
+.right form .text{
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #656565;
+}
+.right form .msg{
+  margin-top: 10px;
+}
+.right form input, .right form textarea{
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+}
+.right form input:focus,
+.right form textarea:focus{
+  outline-color: #3498db;
+}
+.right form input{
+  height: 35px;
+}
+.right form .btn1{
+  margin-top: 10px;
+}
+.right form .btn1 button{
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #f12020;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+.right form .btn1 button:hover{
+  background: green;
+}
+.bottom center{
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+.bottom center span{
+  color: #656565;
+}
+.bottom center a{
+  color: #f12020;
+  text-decoration: none;
+}
+.bottom center a:hover{
+  text-decoration: underline;
+}
+@media screen and (max-width: 880px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
+}
+
+
+
+
+@media (max-width: 880px)
+{
+    header
+    {
+      padding: 20px 50px;
+    }
+    .banner
+    {
+      padding: 100px 50px 150px;
+    }
+    .banner h2
+    {
+      font-size: 1.8em;
+    }
+    .banner .content p,
+    .banner .content a
+    {
+      font-size: 1em;
+    }
+    .banner.active
+    {
+      transform: translateX(-150px);
+    }
+    #navigation
+    {
+      width: 150px;
+    }
+    #navigation ul li a
+    {
+      font-size: 1.5em;
+      margin: 5px 5px;
+    }
+    .sci
+    {
+      position: absolute;
+      bottom: 50px;
+      right: initial;
+      flex-direction: row;
+    }
+    .sci li a
+    {
+      margin: initial;
+      margin-right: 10px;
+    }
+}
+
+@font-face{
+    font-family: 'Gilroy';
+    src: url(Gilroy-Regular.woff) format(woff);
+}
+
+.hide{
+    display: none;
+}
+.fadeIn{
+    animation: fade 0.5s ease-in-out;
+}
+
+main{
+    max-width: 100%;
+
+    margin: 0 auto;
+}
+.stats{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)) ,url('covid-2.jpg');
+    background-size: cover;
+}
+.latest-report{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+
+    color: #FFF;
+}
+
+.country,
+.total-cases,
+.recovered,
+.deaths{
+    height: 100px;
+}
+
+.name{
+    font-size: 2.2em;
+    color: red;
+    font-weight: bold;
+}
+
+.change-country{
+    cursor: pointer;
+}
+
+.title{
+    font-size: 1.3em;
+    color: brown;
+}
+.total-cases .value{
+    font-size: 2em;
+    font-weight: bold;
+}
+.recovered .value{
+    font-size: 2em;
+    font-weight: bold;
+    color: #009688;
+}
+.deaths .value{
+    font-size: 2em;
+    font-weight: bold;
+    color: #f44336;
+}
+.new-value{
+    font-size: 1.3em;
+}
+
+.chart{
+    width: 80%;
+    height: 70vh;
+    min-height: 500px;
+
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.search-country{
+    position: relative;
+    top: 10px;
+}
+.search-box{
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 400px;
+    height: 30px;
+
+    background-color: blue;
+
+    z-index: 1;
+}
+.search-box input{
+    width: 360px;
+    height: 25px;
+
+    border: none;
+
+    background-color: transparent;
+    color: #FFF;
+
+    padding-left: 15px;
+
+    font-size: 1.1em;
+}
+.search-box img{
+    width: 20px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.country-list{
+    display: flex;
+
+    position: absolute;
+    top: 30px;
+
+    width: 400px;
+    height: 300px;
+
+    background-color: gray;
+    opacity: 0.9;
+
+    overflow-y: scroll;
+}
+
+.country-list ul{
+    width: 100%;
+}
+
+.country-list ul li{
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    color: black;
+}
+.country-list ul li:hover{
+    border-left: 1px solid #FFF;
+}
+.country-list::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .country-list::-webkit-scrollbar-track {
+    background: #111;
+  }
+
+  .country-list::-webkit-scrollbar-thumb {
+    background: #F1F1F1;
+  }
+
+  .country-list::-webkit-scrollbar-thumb:hover {
+    background: #FFF;
+  }
+@media screen and (max-width: 600px){
+    .latest-report{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

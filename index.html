@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>COVID-20</title>
+
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+
+      <link rel= "stylesheet" type= "text/css" href= "style.css">
+
+      <link rel= "stylesheet" type= "text/css" href= "materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+
+  </head>
+  <body>
+
+
+
+
+    <section class="banner" id="sec">
+      <header>
+        <a href="#case" class="logo">Covid&nbsp<span>20</span></a>
+        <div id="toggle" onclick="toggle()"></div>
+      </header>
+      <div class="content">
+        <h2>To prevent the spread of COVID-19</h2><br>
+        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspClean your hands often. Use soap and water, or an alcohol-based hand rub. Maintain a safe distance from anyone who is coughing or sneezing. Wear a mask when physical distancing is not possible.
+            Don’t touch your eyes, nose or mouth. Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze. Stay home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention.</p>
+        <a href="https://www.google.com/search?sxsrf=ALeKk00aGIfgOVadmAfF7kWcWSJWumwD0g%3A1610001066485&source=hp&ei=qqr2X7LIG7Sxmge94b7gAw&iflsig=AINFCbYAAAAAX_a4ukp9Yz7LxUcIkE0ADBt5VA56hSrs&q=covid-19+prevention&oq=co&gs_lcp=CgZwc3ktYWIQARgAMgQIIxAnMgQIIxAnMgQIIxAnMggIABCRAhCLAzIICAAQkQIQiwMyCAgAELEDEIMBMgUIABCxAzIICAAQsQMQgwEyBQgAELEDMgIIADoLCAAQyQMQkQIQiwNQkiRY4yRgxTNoAHAAeACAAZ4BiAGNApIBAzAuMpgBAKABAaoBB2d3cy13aXq4AQM&sclient=psy-ab">Know more</a>
+      </div>
+      <ul class="sci">
+        <li><a href="https://www.facebook.com/profile.php?id=100004349119082"><img src="facebook.png"></a></li>
+        <li><a href="#"><img src="mail.png"></a></li>
+        <li><a href="https://twitter.com/COVIDNewsByMIB?s=09"><img src="twitter.png"></a></li>
+      </ul>
+    </section>
+    <div id="navigation">
+      <ul class="links">
+    		<li><a href="index.html">Home</a></li>
+    		<li><a href="#case">Count</a></li>
+    		<li><a href="card.html">Vaccine</a></li>
+        <li><a href="#contact">About Us</a></li>
+        <li><a href="https://www.google.com/search?sxsrf=ALeKk00aGIfgOVadmAfF7kWcWSJWumwD0g%3A1610001066485&source=hp&ei=qqr2X7LIG7Sxmge94b7gAw&iflsig=AINFCbYAAAAAX_a4ukp9Yz7LxUcIkE0ADBt5VA56hSrs&q=covid-19+prevention&oq=co&gs_lcp=CgZwc3ktYWIQARgAMgQIIxAnMgQIIxAnMgQIIxAnMggIABCRAhCLAzIICAAQkQIQiwMyCAgAELEDEIMBMgUIABCxAzIICAAQsQMQgwEyBQgAELEDMgIIADoLCAAQyQMQkQIQiwNQkiRY4yRgxTNoAHAAeACAAZ4BiAGNApIBAzAuMpgBAKABAaoBB2d3cy13aXq4AQM&sclient=psy-ab">About Covid</a></li>
+    		<li><a href="#contact">Contact</a></li>
+    	</ul>
+    </div>
+    <script type="text/javascript">
+    function toggle() {
+      var sec = document.getElementById('sec');
+      var con = document.getElementById('con');
+      var nav = document.getElementById('navigation');
+      sec.classList.toggle('active');
+      con.classList.toggle('active');
+      nav.classList.toggle('active');
+      nav.classList.toggle('before');
+    }
+    </script>
+
+    <main><a name='case'></a>
+      <div class="stats">
+        <div class="latest-report">
+          <div class="country">
+            <div class="name">Loading...</div>
+            <div class="change-country">change</div>
+            <div class="search-country hide">
+              <div class="search-box">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search Country..."
+                />
+                <img class="close" src="close.svg" alt="" />
+              </div>
+              <div class="country-list"></div>
+            </div>
+          </div>
+          <div class="total-cases">
+            <div class="title">Total Cases</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+          <div class="recovered">
+            <div class="title">Recovered</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+          <div class="deaths">
+            <div class="title">Deaths</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+        </div>
+        <div class="chart">
+          <canvas id="axes_line_chart"></canvas>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+      integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
+      crossorigin="anonymous">
+    </script>
+    <script
+      language="JavaScript"
+      src="http://www.geoplugin.net/javascript.gp"
+      type="text/javascript"
+    ></script>
+    <script src="countries.js"></script>
+    <script src="app.js"></script>
+
+
+
+
+<div class="bot">
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Covid-Bot"
+      agent-id="d388a8ac-261b-4db2-835d-53099bff60fb"
+      language-code="en"
+    ></df-messenger>
+</div>
+
+        <footer><a name='contact'></a>
+          <div class="main-content">
+            <div class="left box">
+              <h2>About us</h2>
+              <div class="content">
+                <p><strong><span>Skct Devils</span></strong> is a startup you can contact us for Web Design, Web Developement, App Developement and so on.</p>
+                <div class="social">
+                  <a href="https://www.facebook.com/pibindia/"><span class="fab fa-facebook-f"></span></a>
+                  <a href="https://twitter.com/COVIDNewsByMIB?s=09"><span class="fab fa-twitter"></span></a>
+                  <a href="https://www.instagram.com/pibindia/"><span class="fab fa-instagram"></span></a>
+                  <a href="https://youtu.be/W4HDj2CcPAM"><span class="fab fa-youtube"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="center box">
+              <h2>Address</h2>
+              <div class="content">
+                <div class="place">
+                  <span class="fas fa-map-marker-alt"></span>
+                  <span class="text">Coimbatore, TamilNadu</span>
+                </div>
+                <div class="phone">
+                  <span class="fas fa-phone-alt"></span>
+                  <span class="text">8608973718</span>
+                </div>
+                <div class="email">
+                  <span class="fas fa-envelope"></span>
+                  <span class="text">mouleshmoulesh@gmai.com</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="right box">
+              <h2>Contact us</h2>
+              <div class="content">
+                <form action="#">
+                  <div class="email">
+                    <div class="text">Email *</div>
+                    <input type="email" required>
+                  </div>
+                  <div class="msg">
+                    <div class="text">Message *</div>
+                    <input type="textarea" required>
+                  </div>
+                  <div class="btn1">
+                    <button type="submit">Send</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <center>
+              <span class="credit">Created By <a href="#">Skct Devils</a> | </span>
+              <span class="far fa-copyright"></span><span> 2020 All rights reserved.</span>
+            </center>
+          </div>
+        </footer>
+
+
+
+
+
+  </body>
+</html>
